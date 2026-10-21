@@ -1,4 +1,3 @@
-
 import {
   ArrowDownRight,
   ArrowRight,
@@ -17,6 +16,9 @@ import {
   Workflow,
   Zap,
 } from "lucide-react";
+
+const whatsappUrl =
+  "https://wa.me/34659980603?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20de%20Transport%20AI.";
 
 const services = [
   {
@@ -148,7 +150,7 @@ export default function Home() {
           <a href="#nosotros">Nosotros</a>
         </nav>
 
-        <a className="header-cta" href="#contacto">
+        <a className="header-cta" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
           Hablemos <ArrowUpRight size={16} />
         </a>
         <a className="mobile-menu" href="#servicios" aria-label="Ver servicios"><Menu /></a>
@@ -164,7 +166,7 @@ export default function Home() {
             soluciones digitales para empresas que quieren dar el siguiente paso.
           </p>
           <div className="hero-actions">
-            <a className="button-primary" href="#contacto">Hablemos de tu proyecto <ArrowRight size={17} /></a>
+            <a className="button-primary" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Hablemos de tu proyecto <ArrowRight size={17} /></a>
             <a className="button-secondary" href="#proyectos">Explorar soluciones <ArrowDownRight size={17} /></a>
           </div>
           <div className="hero-trust">
@@ -199,7 +201,7 @@ export default function Home() {
       <section className="intro-strip" id="nosotros">
         <div className="intro-label"><span className="section-index">01 /</span> QUÉ HACEMOS</div>
         <p>La tecnología tiene sentido cuando <span>resuelve problemas reales.</span> Por eso diseñamos soluciones digitales alrededor de las necesidades de cada negocio.</p>
-        <a href="#contacto" aria-label="Contactar con Transport AI"><MoveUpRight size={22} /></a>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Contactar con Transport AI"><MoveUpRight size={22} /></a>
       </section>
 
       <section className="services-section section-pad" id="servicios">
@@ -220,7 +222,7 @@ export default function Home() {
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <div className="service-tags">{service.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                <a href="#contacto" className="service-link">Explorar solución <ArrowUpRight size={16} /></a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="service-link">Explorar solución <ArrowUpRight size={16} /></a>
               </article>
             );
           })}
@@ -244,7 +246,7 @@ export default function Home() {
                 <span className="project-category">{project.category}</span>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <a href="#contacto" aria-label={`Solicitar un proyecto de ${project.title}`}>Quiero algo así <ArrowUpRight size={17} /></a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label={`Solicitar un proyecto de ${project.title}`}>Quiero algo así <ArrowUpRight size={17} /></a>
               </div>
             </article>
           ))}
@@ -266,7 +268,7 @@ export default function Home() {
           <h2>Tecnología con<br />un propósito <span className="gradient-text">claro.</span></h2>
           <p className="why-description">No se trata de añadir tecnología porque sí. Se trata de entender qué necesita tu negocio y crear una solución útil, clara y preparada para evolucionar.</p>
           <ul className="benefits-list">{benefits.map((benefit) => <li key={benefit}><span><Check size={14} /></span>{benefit}</li>)}</ul>
-          <a className="button-primary" href="#contacto">Cuéntanos tu idea <ArrowRight size={17} /></a>
+          <a className="button-primary" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Cuéntanos tu idea <ArrowRight size={17} /></a>
         </div>
       </section>
 
@@ -276,8 +278,8 @@ export default function Home() {
           <div className="eyebrow"><span className="status-dot" /> EL SIGUIENTE PASO EMPIEZA AQUÍ</div>
           <h2>¿Y si hacemos<br />algo <span className="gradient-text">grande?</span></h2>
           <p>Cuéntanos qué necesitas. Exploraremos contigo cómo convertir tu idea en una solución digital.</p>
-          <a className="button-primary contact-button" href="mailto:contacto@transportai.es?subject=Proyecto%20web%20-%20Transport%20AI">Hablemos de tu proyecto <ArrowUpRight size={18} /></a>
-          <span className="contact-note">Sin compromiso · Cuéntanos tu idea</span>
+          <a className="button-primary contact-button" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Hablemos de tu proyecto <MessageCircle size={18} /></a>
+          <span className="contact-note">Sin compromiso · Escríbenos por WhatsApp</span>
         </div>
       </section>
 
